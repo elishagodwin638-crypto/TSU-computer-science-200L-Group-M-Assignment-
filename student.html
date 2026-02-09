@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/student.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Student Dashboard</h2>
+
+    <!-- Profile Card -->
+    <div class="card">
+        <h3>Student Profile</h3>
+        <input type="text" id="matric" placeholder="Matric Number">
+        <select id="department">
+            <option>Computer Science</option>
+            <option>Mass Communication</option>
+            <option>Accounting</option>
+            <option>Business Administration</option>
+        </select>
+        <select id="level">
+            <option>100</option>
+            <option>200</option>
+            <option>300</option>
+            <option>400</option>
+        </select>
+        <button onclick="saveProfile()">Save Profile</button>
+    </div>
+
+    <!-- Payment Summary Card -->
+    <div class="card">
+        <h3>Payment Summary</h3>
+        <p id="totalFees"></p>
+        <p id="totalPaid"></p>
+        <p id="balance"></p>
+        <p id="progress"></p>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Payment Card -->
+    <div class="card">
+        <h3>Fees Payment</h3>
+        <input type="number" id="amount" placeholder="Enter Amount">
+        <button onclick="payFees()">Pay Now</button>
+    </div>
+
+    <!-- Payment History Card -->
+    <div class="card">
+        <h3>Payment History</h3>
+        <table>
+            <thead>
+                <tr><th>Amount Paid</th><th>Date</th></tr>
+            </thead>
+            <tbody id="history"></tbody>
+        </table>
+    </div>
+
+    <!-- Payment Chart Card -->
+    <div class="card">
+        <h3>Payment Chart</h3>
+        <canvas id="paymentChart"></canvas>
+    </div>
+
+</div>
+
+</body>
+</html>

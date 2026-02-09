@@ -1,0 +1,70 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    margin:0;
+    padding:0;
+}
+
+.container, .login-box, .dashboard{
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+.login-box input, .dashboard input, select, button{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+button{
+    background:#002147;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#001734;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top:20px;
+}
+
+th, td{
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:10px 0;
+    border-radius:10px;
+    box-shadow:0 0 5px gray;
+}
+
+.progress-container{
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    height:25px;
+    margin-top:10px;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:green;
+    color:white;
+    text-align:center;
+    line-height:25px;
+}
